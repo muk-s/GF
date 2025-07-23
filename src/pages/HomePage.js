@@ -23,14 +23,15 @@ function HomePage() {
               <h2 className="text-2xl font-bold mb-2 text-primary">{product.name}</h2>
               <p className="text-accent mb-4 h-20 overflow-y-auto">{product.description}</p>
               <div className="flex justify-between items-center mt-4">
+                <p className="text-sm line-through text-red-500">Ksh {product.actualPrice}</p>
                 <p className="text-2xl font-bold text-green-600">Ksh {product.price}</p>
-                <button
+              </div>
+                              <button
                   onClick={() => addToCart(product)}
                   className="bg-blue-600 text-white font-bold px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Add to Cart
                 </button>
-              </div>
             </div>
           </div>
         ))}
