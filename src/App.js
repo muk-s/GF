@@ -3,7 +3,7 @@ import LoginPage from './pages/LoginPage';
 import ProductsPage from './pages/ProductPage';
 import SalesPage from './pages/SalesPage';
 import CheckoutPage from './pages/CheckoutPage';
-import RequireAuth from './components/RequireAuth';
+import RequireAuth from './components/RequireContext';
 
 function App() {
   return (
