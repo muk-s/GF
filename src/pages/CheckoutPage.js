@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import axios from '../api/axios';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 function CheckoutPage() {
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const { cart, removeFromCart } = useCart();
 
   const handleCheckout = async () => {
     if (cart.length === 0) return alert('Cart is empty');
@@ -25,7 +25,7 @@ function CheckoutPage() {
       const items = cart.map(({ id, qty }) => ({ id, qty }));
       await axios.post('/orders', { items });
 
-      localStorage.removeItem('cart');
+      cart.forEach(item => removeFromCart(item.id));
       alert('Order placed successfully.');
       navigate('/');
     } catch (err) {
