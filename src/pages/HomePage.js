@@ -23,8 +23,8 @@ function HomePage() {
               <h2 className="text-2xl font-bold mb-2 text-primary">{product.name}</h2>
               <p className="text-accent mb-4 h-20 overflow-y-auto">{product.description}</p>
               <div className="flex justify-between items-center mt-4">
-                <p className="text-sm line-through text-red-500">Ksh {product.actualPrice}</p>
-                <p className="text-2xl font-bold text-green-600">Ksh {product.price}</p>
+                <p className="text-sm line-through text-red-500">Ksh {product.price}</p>
+                <p className="text-2xl font-bold text-green-600">Ksh {product.actualPrice}</p>
               </div>
                               <button
                   onClick={() => addToCart(product)}
