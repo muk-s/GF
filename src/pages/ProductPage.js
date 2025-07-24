@@ -83,10 +83,11 @@ function ProductsPage() {
       <div className="grid md:grid-cols-3 gap-4">
         {products.map(product => (
           <div key={product.id} className="border rounded p-4 shadow relative">
-            <img src={`http://localhost:5000/uploads/${product.imageFile}`} alt={product.name} className="w-full h-40 object-cover mb-2" />
+            <img src={`https://back-gf-production.up.railway.app/uploads/${product.imageFile}`} alt={product.name} className="w-full h-40 object-cover mb-2" />
             <h2 className="font-semibold">{product.name}</h2>
             <p className="text-sm text-gray-600">{product.description}</p>
-            <p className="text-green-700 font-bold">Ksh {product.price}</p>
+            <p className="text-sm line-through text-red-500">Ksh {product.price}</p>
+            <p className="text-green-700 font-bold">Ksh {product.actualPrice}</p>
             <div className="flex justify-between mt-2">
               <button onClick={() => handleEdit(product)} className="text-blue-600 hover:underline">Edit</button>
               <button onClick={() => handleDelete(product.id)} className="text-red-600 hover:underline">Delete</button>
