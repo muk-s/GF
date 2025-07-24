@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
 import ProductsPage from './pages/ProductPage';
 import SalesPage from './pages/SalesPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -14,7 +13,6 @@ function App() {
       <Navbar />
       <div className="container mx-auto p-4">
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={
             <RequireAuth role="admin">

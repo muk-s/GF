@@ -30,7 +30,7 @@ function HomePage() {
       localStorage.setItem('token', token);
       localStorage.setItem('role', decoded.role);
       setRole(decoded.role);
-      setPopup(false); // close modal on login
+      setPopup(false); 
       setTimeout(() => navigate(decoded.role === 'admin' ? '/products' : '/sales'), 300);
     } catch (err) {
       alert('Login failed');
@@ -41,7 +41,7 @@ function HomePage() {
     <div className="p-6 bg-gray-100 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-extrabold text-primary">Gaming Store</h1>
+        <h1 className="text-4xl font-extrabold text-primary">Our Products</h1>
         <button
           onClick={() => setPopup(true)}
           className="bg-blue-600 text-white font-bold px-4 py-2 rounded hover:bg-blue-700 transition"
