@@ -58,7 +58,7 @@ function HomePage() {
             className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1"
           >
             <img
-              src={`http://localhost:5000/uploads/${product.imageFile}`}
+              src={`https://back-gf-production.up.railway.app/uploads/${product.imageFile}`}
               alt={product.name}
               className="w-full h-56 object-cover"
             />
