@@ -23,7 +23,6 @@ const HeroSection = () => {
               Premium Quality
             </span>
             <span className="flex items-center gap-1">
-              <Gamepad2 className="h-4 w-4" />
               Latest Games
             </span>
             <span className="flex items-center gap-1">
