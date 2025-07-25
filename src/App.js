@@ -34,7 +34,6 @@ function App() {
             </RequireAuth>
           } />
         </Routes>
-      </div>
     </Router>
   );
 }
