@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="container mx-auto p-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={
