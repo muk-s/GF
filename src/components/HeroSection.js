@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero-image.jpg';
+import heroImage from '../assets/gaming-hero.jpg';
 import { Gamepad2, Star, ShoppingCart } from 'lucide-react';
 
 const HeroSection = () => {
