@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from '../api/axios';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -39,6 +40,8 @@ function HomePage() {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <HeroSection />
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-extrabold text-primary">Our Products</h1>
