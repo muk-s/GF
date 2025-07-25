@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-gaming-neon-blue/20" />
         <div className="relative z-10 max-w-7xl mx-auto text-center px-6">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <h1 className="text-6xl font-bold text-gradient">GameStore</h1>
+            <h1 className="text-6xl  text-white font-bold text-gradient">GameStore</h1>
           </div>
           <p className="text-2xl text-white text-foreground/90 mb-8 max-w-2xl mx-auto">
             Your ultimate destination for gaming excellence. Discover the latest games and join the community.
