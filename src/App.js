@@ -5,12 +5,10 @@ import CheckoutPage from './pages/CheckoutPage';
 import RequireAuth from './components/RequireContext';
 import HomePage from './pages/HomePage';
 import Cart from './components/Cart';
-import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
-      <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={

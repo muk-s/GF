@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from '../api/axios';
 import { useCart } from '../context/CartContext';
 import HeroSection from '../components/HeroSection';
+import Navbar from '../components/Navbar';
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -16,6 +17,7 @@ function HomePage() {
 
   return (
     <div className="bg-gray-100 min-h-screen width-full">
+      <Navbar />
       <HeroSection />
 
       <div className="flex justify-between items-center mb-8">
@@ -31,7 +33,7 @@ function HomePage() {
             <img
               src={`https://back-gf-production.up.railway.app/uploads/${product.imageFile}`}
               alt={product.name}
-              className="w-full h-56 object-cover"
+              className="w-56 h-56 object-cover"
             />
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-2 text-primary">{product.name}</h2>

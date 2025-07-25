@@ -18,7 +18,7 @@ const HeroSection = () => {
           <p className="text-2xl text-white text-foreground/90 mb-8 max-w-2xl mx-auto">
             Your ultimate destination for gaming excellence. Discover the latest games and join the community.
           </p>
-          <div className="flex items-center justify-center gap-4 text-sm text-foreground/70">
+          <div className="flex items-center text-white justify-center gap-4 text-sm text-foreground/70">
             <span className="flex items-center gap-1">
               Premium Quality
             </span>

@@ -7,7 +7,7 @@ function Cart() {
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   return (
-    <div className="p-6">
+    <div className="flex items-center justify-between gap-4 rounded-2xl border p-4 shadow-md bg-white dark:bg-zinc-900">
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>

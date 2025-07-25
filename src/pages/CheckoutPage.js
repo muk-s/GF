@@ -13,7 +13,7 @@ function CheckoutPage() {
     if (cart.length === 0) return alert('Cart is empty');
 
     setLoading(true);
-    const amount = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+    const amount = cart.reduce((sum, item) => sum + item.qty * item.actualPrice, 0);
 
     try {
       // 1. M-Pesa STK push
@@ -47,13 +47,13 @@ function CheckoutPage() {
             {cart.map((item, idx) => (
               <li key={idx} className="flex justify-between border-b pb-1">
                 <span>{item.name} x {item.qty}</span>
-                <span>Ksh {item.qty * item.price}</span>
+                <span>Ksh {item.qty * item.actualPrice}</span>
               </li>
             ))}
           </ul>
 
           <div className="mb-4 font-semibold">
-            Total: Ksh {cart.reduce((sum, i) => sum + i.qty * i.price, 0)}
+            Total: Ksh {cart.reduce((sum, i) => sum + i.qty * i.actualPrice, 0)}
           </div>
 
           <input
@@ -67,7 +67,7 @@ function CheckoutPage() {
           <button
             onClick={handleCheckout}
             disabled={loading}
-            className="bg-blue-600 text-white py-2 px-4 w-full rounded disabled:opacity-60"
+            className="bg-green-600 text-white py-2 px-4 w-full rounded disabled:opacity-60"
           >
             {loading ? 'Processing...' : 'Pay with M-Pesa & Place Order'}
           </button>

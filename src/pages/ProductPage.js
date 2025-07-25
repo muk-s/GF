@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from '../api/axios';
+import Navbar from '../components/Navbar';
 
 function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -67,6 +68,7 @@ function ProductsPage() {
 
   return (
     <div className="p-6">
+      <Navbar />
       <h1 className="text-2xl font-bold mb-4">Manage Products</h1>
 
       <form onSubmit={handleSubmit} className="grid gap-2 max-w-md mb-6">
