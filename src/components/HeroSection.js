@@ -5,7 +5,7 @@ const HeroSection = () => {
     <section 
         className="relative min-h-[60vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${heroImage})`,
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -15,7 +15,7 @@ const HeroSection = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <h1 className="text-6xl font-bold text-gradient">GameStore</h1>
           </div>
-          <p className="text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-2xl text-white text-foreground/90 mb-8 max-w-2xl mx-auto">
             Your ultimate destination for gaming excellence. Discover the latest games and join the community.
           </p>
           <div className="flex items-center justify-center gap-4 text-sm text-foreground/70">
